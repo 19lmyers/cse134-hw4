@@ -1,0 +1,556 @@
+/* Color Vars & Theming */
+:root {
+  --color-primary-light: #bc1600;
+  --color-onPrimary-light: #ffffff;
+  --color-primaryContainer-light: #ffdad4;
+  --color-onPrimaryContainer-light: #3f0300;
+  --color-secondary-light: #775650;
+  --color-onSecondary-light: #ffffff;
+  --color-secondaryContainer-light: #ffdad4;
+  --color-onSecondaryContainer-light: #2c1511;
+  --color-tertiary-light: #006688;
+  --color-onTertiary-light: #ffffff;
+  --color-tertiaryContainer-light: #c1e8ff;
+  --color-onTertiaryContainer-light: #001e2b;
+  --color-error-light: #ba1a1a;
+  --color-onError-light: #ffffff;
+  --color-errorContainer-light: #ffdad6;
+  --color-onErrorContainer-light: #410002;
+  --color-background-light: #fffbff;
+  --color-onBackground-light: #201a19;
+  --color-surface-light: #fffbff;
+  --color-onSurface-light: #201a19;
+  --color-surfaceVariant-light: #f5ddd9;
+  --color-onSurfaceVariant-light: #534340;
+  --color-outline-light: #857370;
+  --color-outlineVariant-light: #d8c2be;
+  --color-shadow-light: #000000;
+  --color-scrim-light: #000000;
+  --color-primary-dark: #ffb4a6;
+  --color-onPrimary-dark: #660700;
+  --color-primaryContainer-dark: #900e00;
+  --color-onPrimaryContainer-dark: #ffdad4;
+  --color-secondary-dark: #e7bdb5;
+  --color-onSecondary-dark: #5d3f3a;
+  --color-secondaryContainer-dark: #5d3f3a;
+  --color-onSecondaryContainer-dark: #ffdad4;
+  --color-tertiary-dark: #75d1ff;
+  --color-onTertiary-dark: #003548;
+  --color-tertiaryContainer-dark: #004d67;
+  --color-onTertiaryContainer-dark: #c1e8ff;
+  --color-error-dark: #ffb4ab;
+  --color-onError-dark: #690005;
+  --color-errorContainer-dark: #93000a;
+  --color-onErrorContainer-dark: #ffb4ab;
+  --color-background-dark: #201a19;
+  --color-onBackground-dark: #ede0dd;
+  --color-surface-dark: #201a19;
+  --color-onSurface-dark: #ede0dd;
+  --color-surfaceVariant-dark: #534340;
+  --color-onSurfaceVariant-dark: #d8c2be;
+  --color-outline-dark: #a08c89;
+  --color-outlineVariant-dark: #534340;
+  --color-shadow-dark: #000000;
+  --color-scrim-dark: #000000;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-primary: var(--color-primary-light);
+    --color-onPrimary: var(--color-onPrimary-light);
+    --color-primaryContainer: var(--color-primaryContainer-light);
+    --color-onPrimaryContainer: var(--color-onPrimaryContainer-light);
+    --color-secondary: var(--color-secondary-light);
+    --color-onSecondary: var(--color-onSecondary-light);
+    --color-secondaryContainer: var(--color-secondaryContainer-light);
+    --color-onSecondaryContainer: var(--color-onSecondaryContainer-light);
+    --color-tertiary: var(--color-tertiary-light);
+    --color-onTertiary: var(--color-onTertiary-light);
+    --color-tertiaryContainer: var(--color-tertiaryContainer-light);
+    --color-onTertiaryContainer: var(--color-onTertiaryContainer-light);
+    --color-error: var(--color-error-light);
+    --color-onError: var(--color-onError-light);
+    --color-errorContainer: var(--color-errorContainer-light);
+    --color-onErrorContainer: var(--color-onErrorContainer-light);
+    --color-background: var(--color-background-light);
+    --color-onBackground: var(--color-onBackground-light);
+    --color-surface: var(--color-surface-light);
+    --color-onSurface: var(--color-onSurface-light);
+    --color-surfaceVariant: var(--color-surfaceVariant-light);
+    --color-onSurfaceVariant: var(--color-onSurfaceVariant-light);
+    --color-outline: var(--color-outline-light);
+    --color-outlineVariant: var(--color-outlineVariant-light);
+    --color-shadow: var(--color-shadow-light);
+    --color-scrim: var(--color-scrim-light);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: var(--color-primary-dark);
+    --color-onPrimary: var(--color-onPrimary-dark);
+    --color-primaryContainer: var(--color-primaryContainer-dark);
+    --color-onPrimaryContainer: var(--color-onPrimaryContainer-dark);
+    --color-secondary: var(--color-secondary-dark);
+    --color-onSecondary: var(--color-onSecondary-dark);
+    --color-secondaryContainer: var(--color-secondaryContainer-dark);
+    --color-onSecondaryContainer: var(--color-onSecondaryContainer-dark);
+    --color-tertiary: var(--color-tertiary-dark);
+    --color-onTertiary: var(--color-onTertiary-dark);
+    --color-tertiaryContainer: var(--color-tertiaryContainer-dark);
+    --color-onTertiaryContainer: var(--color-onTertiaryContainer-dark);
+    --color-error: var(--color-error-dark);
+    --color-onError: var(--color-onError-dark);
+    --color-errorContainer: var(--color-errorContainer-dark);
+    --color-onErrorContainer: var(--color-onErrorContainer-dark);
+    --color-background: var(--color-background-dark);
+    --color-onBackground: var(--color-onBackground-dark);
+    --color-surface: var(--color-surface-dark);
+    --color-onSurface: var(--color-onSurface-dark);
+    --color-surfaceVariant: var(--color-surfaceVariant-dark);
+    --color-onSurfaceVariant: var(--color-onSurfaceVariant-dark);
+    --color-outline: var(--color-outline-dark);
+    --color-outlineVariant: var(--color-outlineVariant-dark);
+    --color-shadow: var(--color-shadow-dark);
+    --color-scrim: var(--color-scrim-dark);
+  }
+}
+
+/* Reset Styles */
+input,
+textarea {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Base Styles */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+body {
+  color: var(--color-onBackground);
+  background-color: var(--color-background);
+  font-family: Lato, sans-serif;
+  line-height: 1.5;
+}
+
+::selection {
+  color: var(--color-onTertiary);
+  background-color: var(--color-tertiary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+}
+
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--color-tertiary);
+  box-shadow: inset 0 0 0 var(--color-tertiary), 0 3px 0 var(--color-tertiary);
+}
+
+a:focus {
+  box-shadow: 0 0 0 3px var(--color-tertiary);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+strong {
+  font-weight: 700;
+}
+em {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+
+.center {
+  margin: auto;
+}
+
+/* Section */
+section {
+  margin: 3rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+  section {
+    margin: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    margin: 4rem 6rem;
+  }
+}
+
+section h2 {
+  color: var(--color-primary);
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.025em;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1280px) {
+  section h2 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+/* Flex Layout */
+.flex-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Flex Item */
+.flex-item {
+  flex: 0 1 auto;
+}
+
+/* Card */
+.card {
+  color: var(--color-onSurfaceVariant);
+  background-color: var(--color-surfaceVariant);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: min-content;
+  height: min-content;
+  min-width: 250px;
+}
+
+@media (min-width: 640px) {
+  .card {
+    min-width: 400px;
+  }
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.card img {
+  background-color: var(--color-primary);
+  border-radius: 1.5rem 1.5rem 0 0;
+
+  width: 100%;
+  max-height: 35svh;
+
+  object-fit: cover;
+}
+
+@media screen {
+  .card img {
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+}
+
+.card > img {
+  border-radius: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .card img {
+    max-height: 30svh;
+  }
+
+  .card.img-large img {
+    max-height: 60svh;
+  }
+}
+
+.card h3 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.surface {
+  color: var(--color-onSurface);
+  background-color: var(--color-surface);
+}
+
+/* Action Links */
+.action-group {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action {
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  color: var(--color-onPrimary);
+  background-color: var(--color-primary);
+  border-radius: 1.75rem;
+  display: flex;
+  width: fit-content;
+}
+
+.action:hover {
+  color: var(--color-onSecondary);
+  background-color: var(--color-secondary);
+  border-radius: 0.75rem;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.action:active {
+  color: var(--color-onTertiary);
+  background-color: var(--color-tertiary);
+}
+
+.action .text,
+input.action {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+/* Header */
+header.card {
+  margin: 1.5rem;
+  width: auto;
+}
+
+header h1 {
+  color: var(--color-primary);
+  font-size: 3.75rem;
+  line-height: 1;
+  padding-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+header img,
+header.card img {
+  border-radius: 1.5rem;
+
+  height: inherit;
+  min-width: 50svw;
+  max-height: 75svh;
+}
+
+@media screen and (min-width: 640px) {
+  header.main-header {
+    width: auto;
+    margin: 2rem 4rem 3rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-onSurface);
+    background-color: var(--color-surface);
+
+    transform: translateX(-7.5%);
+  }
+
+  header.main-header .card-content {
+    width: min-content;
+    height: min-content;
+
+    color: var(--color-onSurfaceVariant);
+    background-color: var(--color-surfaceVariant);
+    border-radius: 1.5rem;
+
+    transform: translateX(50%);
+
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  header.card {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  header h1 {
+    font-size: 6rem;
+  }
+
+  header p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Footer */
+footer.flex-layout {
+  margin: 3rem;
+  width: auto;
+  flex-direction: row;
+}
+
+@media (min-width: 1024px) {
+    footer.flex-layout {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+}
+
+footer .flex-item {
+  flex: 0 1 auto;
+  white-space: nowrap;
+}
+
+footer .flex-item:first-child {
+    margin-right: auto;
+}
+
+/* Bullet */
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding: 0;
+}
+
+/* Form */
+input,
+select,
+textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: var(--color-surface);
+  color: var(--color-onSurface);
+}
+
+textarea {
+  min-height: 100px;
+}
+
+/* Form */
+.form .card:not(header) {
+  width: 100%;
+  max-width: 600px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  outline: 2px solid var(--color-onSurfaceVariant);
+  border-radius: 0.75rem;
+
+  font-family: Lato, sans-serif;
+  font-size: 1em;
+
+  margin: 12px auto 24px auto;
+  padding: 6px;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px var(--color-tertiary);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Print Styles */
+@media print {
+  .flex-layout {
+    gap: 0;
+  }
+
+  .card {
+    color: var(--color-onBackground);
+    background-color: var(--color-background);
+  }
+
+  .action {
+    color: var(--color-primary);
+  }
+}
