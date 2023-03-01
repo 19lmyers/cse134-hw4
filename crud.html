@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="./favicon.png">
+    <title>CRUD</title>
+  </head>
+  <body>
+    <button id="create">New</button>
+    <template id="post">
+        <div>
+            <h2 class="title"></h2>
+            <time class="date"></time>
+            <p class="summary"></p>
+
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </div>
+    </template>
+    <template id="edit">
+        <dialog>
+            <form>
+                <h2>Edit post</h2>
+                <label for="title">Title</label>
+                <br>
+                <input id="title" required="required">
+                <br>
+                <label for="date">Date</label>
+                <br>
+                <input id="date" type="datetime-local" required="required">
+                <br>
+                <label for="summary">Summary</label>
+                <br>
+                <textarea id="summary" required="required"></textarea>
+                <br>
+                <button class="cancel">Cancel</button>
+                <input type="submit" formmethod="dialog" value="Save">
+            </form>
+        </dialog>
+    </template>
+    <template id="delete">
+        <dialog>
+            <form>
+                <h2>Delete post?</h2>
+                <button class="cancel">Cancel</button>
+                <input type="submit" formmethod="dialog" value="Delete">
+            </form>
+        </dialog>
+    </template>
+  </body>
+  <script type="module" src="blog.js"></script>
+</html>

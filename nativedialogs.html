@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="./favicon.png">
+    <title>Native Dialogs</title>
+  </head>
+  <body>
+    <h2>Native</h2>
+    <button id="alert">Alert</button>
+
+    <button id="confirm">Confirm</button>
+    <output id="confirmOutput"></output>
+
+    <button id="prompt">Prompt</button>
+    <output id="promptOutput"></output>
+
+    <button id="saferPrompt">Safer Prompt</button>
+    <output id="saferPromptOutput"></output>
+
+    <script type="module">
+        import { customAlert, customConfirm, customPrompt } from './customdialog.js';
+        window.customAlert = customAlert;
+        window.customConfirm = customConfirm;
+        window.customPrompt = customPrompt;
+    </script>
+
+    <h2>Custom</h2>
+    <button id="alertCustom" onclick="window.customAlert(
+        {
+            title: 'Hello, world!',
+            subtitle: 'This is an alert dialog'
+        }
+    )">Alert</button>
+
+    <button id="confirmCustom" onclick="window.customConfirm(
+        {
+            title: 'Hello, world!',
+            subtitle: 'This is a confirm dialog',
+            onCancel: () => {
+                document.getElementById('confirmOutputCustom').innerHTML = 'The value returned by the confirm method is : false'
+            },
+            onConfirm: () => {
+                document.getElementById('confirmOutputCustom').innerHTML = 'The value returned by the confirm method is : true'
+            }
+        }
+    )">Confirm</button>
+    <output id="confirmOutputCustom"></output>
+
+    <button id="promptCustom" onclick="window.customPrompt(
+        {
+            title: 'Hello, world!',
+            subtitle: 'This is a prompt dialog',
+            sanitize: false,
+            onEnter: (input) => {
+                document.getElementById('promptOutputCustom').innerHTML = `User entered : ${input}`
+            }
+        }
+    )">Prompt</button>
+    <output id="promptOutputCustom"></output>
+
+    <button id="saferPromptCustom" onclick="window.customPrompt(
+        {
+            title: 'Hello, world!',
+            subtitle: 'This is a safer prompt dialog',
+            sanitize: true,
+            onEnter: (input) => {
+                document.getElementById('saferPromptOutputCustom').innerHTML = `User entered : ${input}`
+            }
+        }
+    )">Safer Prompt</button>
+    <output id="saferPromptOutputCustom"></output>
+  </body>
+  <script type="text/javascript" src="node_modules/dompurify/dist/purify.min.js"></script>
+  <script type="text/javascript" src="nativedialogs.js"></script>
+</html>
